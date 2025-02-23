@@ -1,143 +1,336 @@
-local CodeGamer = Instance.new("ScreenGui")
-CodeGamer.Name = "CodeGamer"
-CodeGamer.ResetOnSpawn = false
-CodeGamer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-CodeGamer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
-local CodeFrame = Instance.new("Frame")
-CodeFrame.Name = "CodeFrame"
-CodeFrame.Position = UDim2.new(0.348, 0, 0.224, 0)
-CodeFrame.Size = UDim2.new(0, 374, 0, 465)
-CodeFrame.BackgroundColor3 = Color3.new(0.627451, 0.87451, 0.976471)
-CodeFrame.BorderSizePixel = 0
-CodeFrame.BorderColor3 = Color3.new(0, 0, 0)
-CodeFrame.Parent = CodeGamer
+-- Instances: 21 | Scripts: 6 | Modules: 0 | Tags: 0
+local G2L = {};
 
-local CodeLabel = Instance.new("TextLabel")
-CodeLabel.Name = "CodeLabel"
-CodeLabel.Position = UDim2.new(0, 0, 0.636156, 0)
-CodeLabel.Size = UDim2.new(0, 374, 0, 75)
-CodeLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-CodeLabel.BackgroundTransparency = 1
-CodeLabel.BorderSizePixel = 0
-CodeLabel.BorderColor3 = Color3.new(0, 0, 0)
-CodeLabel.Transparency = 1
-CodeLabel.Text = "ЭЩКЕРЕ"
-CodeLabel.TextColor3 = Color3.new(0, 0, 0)
-CodeLabel.TextSize = 13
-CodeLabel.FontFace = Font.new("rbxasset://fonts/families/HighwayGothic.json", Enum.FontWeight.Regular, Enum.FontStyle.Italic)
-CodeLabel.Parent = CodeFrame
+-- StarterGui.CodeGamer
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[CodeGamer]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
-local UICorner = Instance.new("UICorner")
-UICorner.Name = "UICorner"
 
-UICorner.Parent = CodeFrame
+-- StarterGui.CodeGamer.CodeFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(161, 224, 250);
+G2L["2"]["Size"] = UDim2.new(0, 374, 0, 465);
+G2L["2"]["Position"] = UDim2.new(0.348, 0, 0.224, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[CodeFrame]];
 
-local TemplateCredit = Instance.new("Frame")
-TemplateCredit.Name = "TemplateCredit"
-TemplateCredit.Position = UDim2.new(0.498312, 0, 0.239544, 0)
-TemplateCredit.Size = UDim2.new(0.536731, 0, 0.431777, 0)
-TemplateCredit.BackgroundColor3 = Color3.new(0.572549, 0.8, 0.890196)
-TemplateCredit.BackgroundTransparency = 1
-TemplateCredit.BorderSizePixel = 0
-TemplateCredit.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TemplateCredit.AnchorPoint = Vector2.new(0.5, 0.5)
-TemplateCredit.Transparency = 1
-TemplateCredit.Parent = CodeFrame
 
-local PlayerHeadThumbnail = Instance.new("ImageLabel")
-PlayerHeadThumbnail.Name = "PlayerHeadThumbnail"
-PlayerHeadThumbnail.Position = UDim2.new(0.489723, 0, 0.242098, 0)
-PlayerHeadThumbnail.Size = UDim2.new(0.719624, 0, 0.363147, 0)
-PlayerHeadThumbnail.BackgroundColor3 = Color3.new(0.572549, 0.8, 0.890196)
-PlayerHeadThumbnail.BorderSizePixel = 0
-PlayerHeadThumbnail.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-PlayerHeadThumbnail.AnchorPoint = Vector2.new(0.5, 0.5)
-PlayerHeadThumbnail.ImageTransparency = 1
-PlayerHeadThumbnail.Parent = TemplateCredit
+-- StarterGui.CodeGamer.CodeFrame.CodeLabel
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextSize"] = 13;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BackgroundTransparency"] = 1;
+G2L["3"]["Size"] = UDim2.new(0, 374, 0, 75);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[ЭЩКЕРЕ]];
+G2L["3"]["Name"] = [[CodeLabel]];
+G2L["3"]["Position"] = UDim2.new(0, 0, 0.63616, 0);
 
-local UICorner2 = Instance.new("UICorner")
-UICorner2.Name = "UICorner"
-UICorner2.CornerRadius = UDim.new(0.25, 0)
-UICorner2.Parent = PlayerHeadThumbnail
 
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint.Name = "UIAspectRatioConstraint"
+-- StarterGui.CodeGamer.CodeFrame.TText
+G2L["4"] = Instance.new("LocalScript", G2L["2"]);
+G2L["4"]["Name"] = [[TText]];
 
-UIAspectRatioConstraint.Parent = PlayerHeadThumbnail
 
-local PlayerDisplayName = Instance.new("TextLabel")
-PlayerDisplayName.Name = "PlayerDisplayName"
-PlayerDisplayName.Position = UDim2.new(0.5, 0, 0.719282, 0)
-PlayerDisplayName.Size = UDim2.new(0.896166, 0, 0.147801, 0)
-PlayerDisplayName.BackgroundColor3 = Color3.new(1, 1, 1)
-PlayerDisplayName.BackgroundTransparency = 1
-PlayerDisplayName.BorderSizePixel = 0
-PlayerDisplayName.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-PlayerDisplayName.AnchorPoint = Vector2.new(0.5, 0.5)
-PlayerDisplayName.Transparency = 1
-PlayerDisplayName.Text = ""
-PlayerDisplayName.TextColor3 = Color3.new(1, 1, 1)
-PlayerDisplayName.TextSize = 14
-PlayerDisplayName.FontFace = Font.new("rbxasset://fonts/families/HighwayGothic.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-PlayerDisplayName.TextScaled = true
-PlayerDisplayName.TextWrapped = true
-PlayerDisplayName.Parent = TemplateCredit
+-- StarterGui.CodeGamer.CodeFrame.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["2"]);
 
-local UserId = Instance.new("NumberValue")
-UserId.Name = "UserId"
 
-UserId.Parent = TemplateCredit
 
-local PlayerBustThumbnail = Instance.new("ImageLabel")
-PlayerBustThumbnail.Name = "PlayerBustThumbnail"
-PlayerBustThumbnail.Position = UDim2.new(0.489723, 0, 0.242098, 0)
-PlayerBustThumbnail.Size = UDim2.new(0.719624, 0, 0.363147, 0)
-PlayerBustThumbnail.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
-PlayerBustThumbnail.BackgroundTransparency = 1
-PlayerBustThumbnail.BorderSizePixel = 0
-PlayerBustThumbnail.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-PlayerBustThumbnail.AnchorPoint = Vector2.new(0.5, 0.5)
-PlayerBustThumbnail.Transparency = 1
-PlayerBustThumbnail.Parent = TemplateCredit
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit
+G2L["6"] = Instance.new("Frame", G2L["2"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(147, 205, 228);
+G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["6"]["Size"] = UDim2.new(0.53673, 0, 0.43178, 0);
+G2L["6"]["Position"] = UDim2.new(0.49831, 0, 0.23954, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["6"]["Name"] = [[TemplateCredit]];
+G2L["6"]["BackgroundTransparency"] = 1;
 
-local UICorner3 = Instance.new("UICorner")
-UICorner3.Name = "UICorner"
-UICorner3.CornerRadius = UDim.new(0.25, 0)
-UICorner3.Parent = PlayerBustThumbnail
 
-local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint2.Name = "UIAspectRatioConstraint"
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerHeadThumbnail
+G2L["7"] = Instance.new("ImageLabel", G2L["6"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(147, 205, 228);
+G2L["7"]["ImageTransparency"] = 1;
+G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7"]["Size"] = UDim2.new(0.71962, 0, 0.36315, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["7"]["Name"] = [[PlayerHeadThumbnail]];
+G2L["7"]["Position"] = UDim2.new(0.48972, 0, 0.2421, 0);
 
-UIAspectRatioConstraint2.Parent = PlayerBustThumbnail
 
-local UICorner4 = Instance.new("UICorner")
-UICorner4.Name = "UICorner"
-UICorner4.CornerRadius = UDim.new(0.25, 0)
-UICorner4.Parent = TemplateCredit
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerHeadThumbnail.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(0.25, 0);
 
-local Music = Instance.new("Sound")
-Music.Name = "Music"
 
-Music.Parent = CodeFrame
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerHeadThumbnail.UIAspectRatioConstraint
+G2L["9"] = Instance.new("UIAspectRatioConstraint", G2L["7"]);
 
-local Script = Instance.new("Script")
-Script.Name = "Script"
 
-Script.Parent = Music
 
-local CodeButton = Instance.new("TextButton")
-CodeButton.Name = "CodeButton"
-CodeButton.Position = UDim2.new(0.906417, 0, 0.0150538, 0)
-CodeButton.Size = UDim2.new(0, 28, 0, 27)
-CodeButton.BackgroundColor3 = Color3.new(1, 1, 1)
-CodeButton.BackgroundTransparency = 1
-CodeButton.BorderSizePixel = 0
-CodeButton.BorderColor3 = Color3.new(0, 0, 0)
-CodeButton.Transparency = 1
-CodeButton.Text = "X"
-CodeButton.TextColor3 = Color3.new(0, 0, 0)
-CodeButton.TextSize = 14
-CodeButton.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-CodeButton.Parent = CodeFrame
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerDisplayName
+G2L["a"] = Instance.new("TextLabel", G2L["6"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextTransparency"] = 1;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a"]["Size"] = UDim2.new(0.89617, 0, 0.1478, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["a"]["Text"] = [[]];
+G2L["a"]["Name"] = [[PlayerDisplayName]];
+G2L["a"]["Position"] = UDim2.new(0.5, 0, 0.71928, 0);
 
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.Hover
+G2L["b"] = Instance.new("LocalScript", G2L["6"]);
+G2L["b"]["Name"] = [[Hover]];
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.UserId
+G2L["c"] = Instance.new("NumberValue", G2L["6"]);
+G2L["c"]["Name"] = [[UserId]];
+G2L["c"]["Value"] = 963202976;
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.CreditManager
+G2L["d"] = Instance.new("LocalScript", G2L["6"]);
+G2L["d"]["Name"] = [[CreditManager]];
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerBustThumbnail
+G2L["e"] = Instance.new("ImageLabel", G2L["6"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
+G2L["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["e"]["Size"] = UDim2.new(0.71962, 0, 0.36315, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Name"] = [[PlayerBustThumbnail]];
+G2L["e"]["Position"] = UDim2.new(0.48972, 0, 0.2421, 0);
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerBustThumbnail.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0.25, 0);
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.PlayerBustThumbnail.UIAspectRatioConstraint
+G2L["10"] = Instance.new("UIAspectRatioConstraint", G2L["e"]);
+
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.UICorner
+G2L["11"] = Instance.new("UICorner", G2L["6"]);
+G2L["11"]["CornerRadius"] = UDim.new(0.25, 0);
+
+
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.TextSupreme
+G2L["12"] = Instance.new("LocalScript", G2L["6"]);
+G2L["12"]["Name"] = [[TextSupreme]];
+
+
+-- StarterGui.CodeGamer.CodeFrame.CodeButton
+G2L["13"] = Instance.new("TextButton", G2L["2"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0, 28, 0, 27);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Name"] = [[CodeButton]];
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[X]];
+G2L["13"]["Position"] = UDim2.new(0.90642, 0, 0.01505, 0);
+
+
+-- StarterGui.CodeGamer.CodeFrame.CodeClose
+G2L["14"] = Instance.new("LocalScript", G2L["2"]);
+G2L["14"]["Name"] = [[CodeClose]];
+
+
+-- StarterGui.CodeGamer.CodeFrame.CodeDragg
+G2L["15"] = Instance.new("LocalScript", G2L["2"]);
+G2L["15"]["Name"] = [[CodeDragg]];
+
+
+-- StarterGui.CodeGamer.CodeFrame.TText
+local function C_4()
+local script = G2L["4"];
+	local frame = script.Parent
+	local textLabel = frame:WaitForChild("CodeLabel")
+	local fullText = "ᴨᴩиɯᴇᴧ ʙ ᴄᴋᴩиᴨᴛинᴦ ʙ 2019 ᴦоду, жᴇᴧᴀᴇᴛ ʙᴄᴇʍ нᴀчинᴀющиʍ удᴀчи."
+	local typingSpeed = 0.05 -- 
+	
+	textLabel.Text = ""
+	
+	local function typeText(text)
+		for i = 1, #text do
+			textLabel.Text = text:sub(1, i)
+			wait(typingSpeed)
+		end
+	end
+	
+	typeText(fullText)
+end;
+task.spawn(C_4);
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.Hover
+local function C_b()
+local script = G2L["b"];
+	local ts = game.TweenService
+	
+	local es = Enum.EasingStyle.Exponential
+	local ed = Enum.EasingDirection.InOut
+	local ti = TweenInfo.new(0.5, es, ed)
+	
+	
+	local DisplayNameOn = ts:Create(script.Parent.PlayerDisplayName, ti, {TextTransparency = 0})
+	local DisplayNameOff = ts:Create(script.Parent.PlayerDisplayName, ti, {TextTransparency = 1})
+	
+	
+	local HeadThumbnailOn = ts:Create(script.Parent.PlayerHeadThumbnail, ti, {ImageTransparency = 0})
+	local HeadThumbnailOff = ts:Create(script.Parent.PlayerHeadThumbnail, ti, {ImageTransparency = 1})
+	
+	
+	local BustThumbnailOn = ts:Create(script.Parent.PlayerBustThumbnail, ti, {ImageTransparency = 0})
+	local BustThumbnailOff = ts:Create(script.Parent.PlayerBustThumbnail, ti, {ImageTransparency = 1})
+	
+	script.Parent.MouseEnter:Connect(function()
+		DisplayNameOn:Play()
+		HeadThumbnailOn:Play()
+		BustThumbnailOff:Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		DisplayNameOff:Play()
+		HeadThumbnailOff:Play()
+		BustThumbnailOn:Play()
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.CreditManager
+local function C_d()
+local script = G2L["d"];
+	local headThumnail = script.Parent.PlayerHeadThumbnail
+	local bustThumbnail = script.Parent.PlayerBustThumbnail
+	
+	local displayName = script.Parent.PlayerDisplayName
+	
+	local UserId = script.Parent.UserId
+	
+	local plrHeadThumbnail = game.Players:GetUserThumbnailAsync(UserId.Value, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+	local plrBustThumbnail = game.Players:GetUserThumbnailAsync(UserId.Value, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size420x420)
+	
+	local success, result = pcall(function()
+		return UserService:GetUserInfosByUserIdsAsync({UserId.Value})
+	end)
+	
+	if success then
+		for _, userInfo in ipairs(result) do
+			displayName.Text = userInfo.DisplayName
+			headThumnail.Image = plrHeadThumbnail
+			bustThumbnail.Image = plrBustThumbnail
+			script.Parent.Name = UserId.Value
+		end
+	else
+	
+	end
+end;
+task.spawn(C_d);
+-- StarterGui.CodeGamer.CodeFrame.TemplateCredit.TextSupreme
+local function C_12()
+local script = G2L["12"];
+	local frame = script.Parent
+	local textLabel = frame:WaitForChild("PlayerDisplayName")
+	local typingSpeed = 0.1
+	local UserService = game:GetService("UserService")
+	local headThumbnail = script.Parent.PlayerHeadThumbnail
+	local bustThumbnail = script.Parent.PlayerBustThumbnail
+	
+	local userIdValue = script.Parent.UserId.Value
+	
+	local plrHeadThumbnail = game.Players:GetUserThumbnailAsync(userIdValue, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+	local plrBustThumbnail = game.Players:GetUserThumbnailAsync(userIdValue, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size420x420)
+	
+	headThumbnail.Image = plrHeadThumbnail
+	bustThumbnail.Image = plrBustThumbnail
+	
+	local displayName = ""
+	local function updateDisplayName()
+		local success, result = pcall(function()
+			return UserService:GetUserInfosByUserIdsAsync({userIdValue})
+		end)
+	
+		if success then
+			for _, userInfo in ipairs(result) do
+				displayName = userInfo.DisplayName
+			end
+		else
+			warn("Не удалось получить информацию пользователя: " .. result)
+		end
+	end
+	
+	updateDisplayName()
+	
+	local function typeText(text)
+		textLabel.Text = "" 
+		for i = 1, #text do
+			textLabel.Text = text:sub(1, i)
+			wait(typingSpeed)
+		end
+	end
+	
+	
+	frame.MouseEnter:Connect(function()
+		typeText(displayName)
+	end)
+end;
+task.spawn(C_12);
+-- StarterGui.CodeGamer.CodeFrame.CodeClose
+local function C_14()
+local script = G2L["14"];
+	local hvh = script.Parent.Music
+	local hvh2 = script.Parent.Parent.CodeFrame
+	
+	script.Parent.CodeButton.MouseButton1Click:Connect(function()
+		hvh:Destroy()
+		hvh2:Destroy()
+	end)
+	
+end;
+task.spawn(C_14);
+-- StarterGui.CodeGamer.CodeFrame.CodeDragg
+local function C_15()
+local script = G2L["15"];
+	local ui = script.Parent
+	ui.Draggable = true
+	ui.Active = true
+	ui.Selectable = true
+end;
+task.spawn(C_15);
+
+return G2L["1"], require;
